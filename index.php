@@ -263,7 +263,7 @@ $directories = getDirectories('.');
 </head>
 <body>
 <h2>Загрузка файлов</h2>
-<form action="index.php" method="post" enctype="multipart/form-data">
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES, 'UTF-8'); ?>" method="post" enctype="multipart/form-data">
   <label for="files">Выберите файлы для загрузки:</label>
   <input type="file" name="files[]" id="files" multiple>
 
